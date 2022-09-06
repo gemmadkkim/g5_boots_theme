@@ -23,7 +23,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="<? echo G5_THEME_IMG_URL ?>/m_logo.svg" alt=""></a>
+        <a class="navbar-brand" href="<? echo G5_URL ?>"><img src="<? echo G5_THEME_IMG_URL ?>/m_logo.svg" alt=""></a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -38,37 +38,60 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                $i = 0;
                foreach( $menu_datas as $row ){
                   if( empty($row) ) continue;
-                  $add_class = (isset($row['sub']) && $row['sub']) ? 'gnb_al_li_plus' : '';
+                  
                ?>
-                <li class="nav-item gnb_1dul">
-                    <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>"
-                    class="nav-link"><?php echo $row['me_name'] ?></a>
+            <li class="nav-item dropdown">
+            <a class="nav-link" href="<?php echo $row['me_link']; ?>" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" target="_<?php echo $row['me_target']; ?>">
+                <?php echo $row['me_name'] ?>
+            </a>
 
-                </li>
+            <!-- 서브 -->
+            <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul> -->
+            <?php
+                        $k = 0;
+                        foreach( (array) $row['sub'] as $row2 ){
+
+                            if( empty($row2) ) continue; 
+
+                            if($k == 0)
+                                echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">'.PHP_EOL;
+                        ?>
+
+                            <li >
+                                <a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>"  class="dropdown-item">
+                                    <?php echo $row2['me_name'] ?>
+                                </a>
+                            </li>
+
+                        <?php
+                        $k++;
+                        }   //end foreach $row2
+
+                        if($k > 0)
+                            echo '</ul>'.PHP_EOL;
+                        ?>
+            <!-- 서브 -->
+            </li>
                 <?php
                $i++;
                }   //end foreach $row
-
-               if ($i == 0) {  ?>
-                <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a
-                        href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수
-                    있습니다.<?php } ?></li>
-                <?php } ?>
+                ?>
             </ul>
+
 
         </div>
     </div>
 </nav>
 
+<!-- 상단 끝 -->
+
+<hr>
 
 
-
-<!-- header e -->
-
-<div class="mView">
-    <video class=""src="https://ybmlemon.com/img/web/HOME/main/ybmlemon.mp4" autoplay muted draggable="true"></video>
-    <img src="<? echo G5_THEME_IMG_URL ?>/main_bg.png" alt="">
-</div>
 
 <!-- content s -->
-<div class="container">
+<div>
