@@ -20,15 +20,19 @@ include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 <!-- header s -->
-<div class="bg-info">
-    <div class="container py-3 d-flex">
-        <h1><a href="#"><img src="<? echo G5_THEME_IMG_URL ?>/m_logo.svg" alt=""></a></h1>
-        <nav id="gnb" class="ms-auto">
-         <h2>메인메뉴</h2>
-         <div class="gnb_wrap">
-            <ul id="gnb_1dul" class="d-flex">
-               
-               <?php
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="<? echo G5_THEME_IMG_URL ?>/m_logo.svg" alt=""></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+
+                <?php
                $menu_datas = get_menu_db(0, true);
                $gnb_zindex = 999; // gnb_1dli z-index 값 설정용
                $i = 0;
@@ -36,27 +40,35 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                   if( empty($row) ) continue;
                   $add_class = (isset($row['sub']) && $row['sub']) ? 'gnb_al_li_plus' : '';
                ?>
-               <li class="gnb_1dli <?php echo $add_class; ?>" style="z-index:<?php echo $gnb_zindex--; ?>">
-                  <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
-                  
-               </li>
-               <?php
+                <li class="nav-item gnb_1dul">
+                    <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>"
+                    class="nav-link"><?php echo $row['me_name'] ?></a>
+
+                </li>
+                <?php
                $i++;
                }   //end foreach $row
 
                if ($i == 0) {  ?>
-                  <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
-               <?php } ?>
+                <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a
+                        href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수
+                    있습니다.<?php } ?></li>
+                <?php } ?>
             </ul>
-            
-            
-         </div>
-       </nav>
+
+        </div>
     </div>
-</div>
+</nav>
+
+
+
+
 <!-- header e -->
+
+<div class="mView">
+    <video class=""src="https://ybmlemon.com/img/web/HOME/main/ybmlemon.mp4" autoplay muted draggable="true"></video>
+    <img src="<? echo G5_THEME_IMG_URL ?>/main_bg.png" alt="">
+</div>
+
 <!-- content s -->
-    <div class="container">
-
-
-
+<div class="container">

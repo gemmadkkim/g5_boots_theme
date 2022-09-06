@@ -52,4 +52,12 @@ border:1px solid #558ab7 !important;
 
 /* nav*/
 #gnb > h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
-#gnb #gnb_1dul a{font-size: 1.3em;padding: 0 20px;font-weight: bold;}
+.gnb_1dul a{font-size: 1.3em;padding: 0 20px;font-weight: bold;}
+
+
+/* view bg */
+.mView{
+  width: 100%; 
+  position: relative; overflow: hidden;
+}
+.mView video{position: absolute; width: 100%; left: 50%; top: 50%; transform: translate(-50%,-50%)}
