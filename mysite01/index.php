@@ -16,7 +16,7 @@ include_once(G5_THEME_PATH.'/head.php');
 ?>
 <style>
     .mView{
-        width: 100%;padding-top: 36%;_background: red;
+        width: 100%;padding-top: 36%;
         position: relative;overflow: hidden;
         
         }
