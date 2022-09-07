@@ -26,5 +26,11 @@ include_once(G5_THEME_PATH.'/head.php');
     <video src="https://ybmlemon.com/img/web/HOME/main/ybmlemon.mp4" autoplay="" muted="" draggable="true"></video>
 </div>
 
+
+
+
+
+
+
 <?php
 include_once(G5_THEME_PATH.'/tail.php');
