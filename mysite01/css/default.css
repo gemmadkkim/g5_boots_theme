@@ -70,6 +70,7 @@ h2.stitle{font-size: 32px;}
 /* 중간 레이아웃 */
 .subView{
   height: 300px;
+  background: beige;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -83,6 +84,7 @@ h2.stitle{font-size: 32px;}
 .subView.subTopBg_04{background-image: url(../img/images04.jpg);}
 .subView.subTopBg_05{background-image: url(../img/images05.jpg);}
 .stitle{}
+
 .locTitle{margin-top:-20px ;}
 
 

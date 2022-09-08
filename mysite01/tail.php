@@ -11,12 +11,15 @@ if(G5_COMMUNITY_USE === false) {
     return;
 }
 ?>
-    </div>
- <!-- content e -->
 
- <footer class="bg-primary">
-    <div class="container ">
-        footer
+    <? include_once(G5_THEME_PATH."/skin/nav/mysubmenu.php")?>
+</div>
+ <!-- 컨텐츠 끝 -->
+
+<!-- 하단 시작 -->
+ <footer class="bg-dark">
+    <div class="container text-center text-white">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, id.
     </div>
  </footer>
 
