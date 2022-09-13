@@ -28,6 +28,143 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 
+<div class="container cont">
+    <div class="row">
+        <div class="col-md-4 p-4">
+            <?php 
+             // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
+             // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
+             // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
+            echo latest('theme/basic', 'notice', 5, 23);		// 최소설치시 자동생성되는 갤러리게시판
+            ?>
+        </div>
+        <div class="col-md-4 p-4">
+            <?php echo latest('theme/basic', 'notice', 5, 23);		// 최소설치시 자동생성되는 갤러리게시판
+            ?>
+        </div>
+        <div class="col-md-4 p-4">
+            <?php echo latest('theme/basic', 'notice', 5, 23);		// 최소설치시 자동생성되는 갤러리게시판
+            ?>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+    .slickslide1 .next,.slickslide1 .prev{cursor: pointer;}
+    img.prev, img.next{position: absolute;top: 50%;transform:translateY(-50%)}
+    img.prev{left: -50px;}
+    img.next{right: -50px;}
+    .slickslide1 .sItem{
+        padding: 10px;opacity: 0.7;transition:.3s;
+        transform:scale(0.8);
+    }
+    .slickslide1 .sItem.slick-center{
+        opacity: 1;
+        transform:scale(1);
+    }
+
+</style>
+<div class="container position-relative">
+    <img src="<?php echo G5_THEME_IMG_URL?>/slide_arrow_left.png" alt="" class="prev d-none d-md-block" >
+    <img src="<?php echo G5_THEME_IMG_URL?>/slide_arrow_right.png" alt="" class="next d-none d-md-block">
+    <div class="slickslide1">
+        <div class="sItem">
+            <img src="<?php echo G5_THEME_IMG_URL?>/img1.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="sItem">
+            <img src="<?php echo G5_THEME_IMG_URL?>/img2.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="sItem">
+            <img src="<?php echo G5_THEME_IMG_URL?>/img3.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="sItem">
+            <img src="<?php echo G5_THEME_IMG_URL?>/img4.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="sItem">
+            <img src="<?php echo G5_THEME_IMG_URL?>/img5.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="sItem">
+            <img src="<?php echo G5_THEME_IMG_URL?>/img6.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="sItem">
+            <img src="<?php echo G5_THEME_IMG_URL?>/img7.jpg" alt="" class="img-fluid">
+        </div>
+       
+    </div>
+</div>
+
+
+<div class="container position-relative">
+    <img src="<?php echo G5_THEME_IMG_URL?>/slide_arrow_left.png" alt="" class="prev d-none d-md-block" >
+    <img src="<?php echo G5_THEME_IMG_URL?>/slide_arrow_right.png" alt="" class="next d-none d-md-block">
+        <?php 
+            echo latest('theme/pic_dorong', 'gallery', 4, 23);		// 최소설치시 자동생성되는 갤러리게시판
+        ?>
+</div>
+
+
+<script>
+    $('.slickslide1').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 4,
+    nextArrow:$('.next'),
+    prevArrow:$('.prev'),
+    
+    responsive: [
+        {
+        breakpoint: 768,
+        settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+        }
+        },
+        {
+        breakpoint: 480,
+        settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+        }
+        }
+    ]
+    });
+
+
+    $('.slickslide2').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 4,
+    nextArrow:$('.next'),
+    prevArrow:$('.prev'),
+    
+    responsive: [
+        {
+        breakpoint: 768,
+        settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+        }
+        },
+        {
+        breakpoint: 480,
+        settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+        }
+        }
+    ]
+    });
+</script>
 
 
 
