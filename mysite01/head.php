@@ -92,10 +92,18 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <hr>
 <!-- 컨텐츠 시작 -->
 <? if(!defined('_INDEX_')) { ?>
-    <div class="subView" id="page_title">
-
-    <div class="txtWrap">
+    <div class=" container subView rounded-5" id="page_title">
+    <div class="txtWrap d-flex flex-column align-items-center gap-3">
         <h2 class="loc1D stitle text-white locTitle"></h2>
+        <div class=" p-3 px-4 bg-dark rounded-5">
+            <ul class="d-flex text-white gap-2">
+                <li><img src="<? echo G5_THEME_IMG_URL ?>/home_icon_white.png" alt=""></li>
+                <li><img src="<? echo G5_THEME_IMG_URL ?>/sub_banner_nav_arrow.png" alt=""></li>
+                <li class="loc1D"></li>
+                <li><img src="<? echo G5_THEME_IMG_URL ?>/sub_banner_nav_arrow.png" alt=""></li>
+                <li><?php echo get_head_title($g5['title']); ?></li>
+            </ul>
+        </div>
     </div>
     </div><!-- full -->
 <? }?>
