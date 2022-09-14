@@ -350,3 +350,21 @@ box-sizing:content-box;
 /* Mobile화면으로 */
 #device_change {display:block;margin:0.3em;padding:0.5em 0;border:1px solid #eee;border-radius:2em;background:#fff;color:#000;font-size:2em;text-decoration:none;text-align:center}
 
+
+
+/* mainCon*/
+.mainCon01{}
+.mainCon01 .txtBox{
+  position: relative;
+}
+.mainCon01 .txtBox .txtWrap{
+  position: absolute;left: 800px;top: 50%;
+  transform:translateY(-50%);
+}
+
+
+@media (max-width:768px) {
+  .mainCon01 .txtBox .txtWrap{
+    left: 0;
+  }
+}
