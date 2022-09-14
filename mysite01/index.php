@@ -42,6 +42,26 @@ include_once(G5_THEME_PATH.'/head.php');
         </div>
     </div>
 </div>
+<div class="mainCon02 container ">
+    <div class="graph">
+        <h2 class="fs-1 fw-bold text-center mb-3" >YBM 레몬만의 밀착 학습관리</h2>
+        <p class="text-secondary text-center fs-6 fs-md-5">체계적인 관리를 통해 우리 아이의 학습효과를 극대화 합니다.</p>
+        <img class="" src="<?php echo G5_THEME_IMG_URL?>/graph.png" alt="">
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-3 card rounded-4 border-0 d-flex justify-content-center align-items-center" style="height:100px">
+          <div class="row ">
+              <img class="col-2 img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_report.png" alt="">
+              <div class="col-10 ">
+                <h4 class="text-black fs-5">학습 결과 보고서</h4>
+                <h4 class="text-secondary fs-5">Daily Class Report</h4>
+                
+              </div>
+          </div>
+        </div>
+    </div>
+
+</div>
 
 
 

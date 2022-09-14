@@ -361,6 +361,14 @@ box-sizing:content-box;
   position: absolute;left: 80px;top: 50%;
   transform:translateY(-50%);
 }
+.mainCon02{position: relative;}
+.mainCon02 .card{
+  box-shadow: 5px 5px 10px #ccc;
+}
+
+.mainCon02 .graph img{
+  vertical-align: middle;
+}
 
 
 @media (max-width:768px) {
