@@ -52,10 +52,10 @@ include_once(G5_THEME_PATH.'/head.php');
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <style>
-    .slickslide1 .next,.slickslide1 .prev{cursor: pointer;}
-    img.prev, img.next{position: absolute;top: 50%;transform:translateY(-50%)}
-    img.prev{left: -50px;}
-    img.next{right: -50px;}
+    .slide1 .next,.slide1 .prev{cursor: pointer;}
+    .slide1 img.prev, .slide1 img.next{position: absolute;top: 50%;transform:translateY(-50%)}
+    .slide1 img.prev{left: -50px;}
+    .slide1 img.next{right: -50px;}
     .slickslide1 .sItem{
         padding: 10px;opacity: 0.7;transition:.3s;
         transform:scale(0.8);
@@ -65,8 +65,20 @@ include_once(G5_THEME_PATH.'/head.php');
         transform:scale(1);
     }
 
+
+    .slide2 .next,.slide2 .prev{cursor: pointer;}
+    .slide2 img.prev, .slide2 img.next{position: absolute;top: 50%;transform:translateY(-50%)}
+    .slide2 img.prev{left: -50px;}
+    .slide2 img.next{right: -50px;}
+    .slickslide2 .sItem{
+        padding: 10px;
+    }
+    /* .slickslide2 .sItem.slick-center{
+        opacity: 1;
+        transform:scale(1);
+    } */
 </style>
-<div class="container position-relative">
+<div class="container position-relative slide1">
     <img src="<?php echo G5_THEME_IMG_URL?>/slide_arrow_left.png" alt="" class="prev d-none d-md-block" >
     <img src="<?php echo G5_THEME_IMG_URL?>/slide_arrow_right.png" alt="" class="next d-none d-md-block">
     <div class="slickslide1">
@@ -96,13 +108,16 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 
-<div class="container position-relative">
+<div class="container position-relative slide2">
     <img src="<?php echo G5_THEME_IMG_URL?>/slide_arrow_left.png" alt="" class="prev d-none d-md-block" >
     <img src="<?php echo G5_THEME_IMG_URL?>/slide_arrow_right.png" alt="" class="next d-none d-md-block">
+    <div class="slickslide2">  
         <?php 
-            echo latest('theme/pic_dorong', 'gallery', 4, 23);		// 최소설치시 자동생성되는 갤러리게시판
+            echo latest('theme/pic_dorong', 'gallery', 7, 23);		// 최소설치시 자동생성되는 갤러리게시판
         ?>
+        </div>
 </div>
+
 
 
 <script>
@@ -110,8 +125,8 @@ include_once(G5_THEME_PATH.'/head.php');
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 4,
-    nextArrow:$('.next'),
-    prevArrow:$('.prev'),
+    nextArrow:$('.slide1 .next'),
+    prevArrow:$('.slide1 .prev'),
     
     responsive: [
         {
@@ -140,8 +155,8 @@ include_once(G5_THEME_PATH.'/head.php');
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 4,
-    nextArrow:$('.next'),
-    prevArrow:$('.prev'),
+    nextArrow:$('.slide2 .next'),
+    prevArrow:$('.slide2 .prev'),
     
     responsive: [
         {
@@ -164,6 +179,7 @@ include_once(G5_THEME_PATH.'/head.php');
         }
     ]
     });
+
 </script>
 
 
