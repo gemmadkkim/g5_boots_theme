@@ -70,8 +70,18 @@ include_once(G5_THEME_PATH.'/head.php');
     .slide2 img.prev, .slide2 img.next{position: absolute;top: 50%;transform:translateY(-50%)}
     .slide2 img.prev{left: -50px;}
     .slide2 img.next{right: -50px;}
-    .slickslide2 .sItem{
-        padding: 10px;
+    .slickslide2 .sItem{margin: 0 10px;}
+    .slide2 .sItem{position: relative;border-radius:10px;overflow: hidden;}
+    .slide2 .sItem .txt{
+        width: 100%;height: 100%;
+        position: absolute;
+        top: 0;left: 0;background-color: rgba(0,0,0,.3);
+
+    }
+    .slide2 .sItem .txt a {
+        height: 100%;
+        display: flex;justify-content: center;align-items: center;
+        color:#fff;font-size: 2em;
     }
     /* .slickslide2 .sItem.slick-center{
         opacity: 1;
@@ -117,7 +127,6 @@ include_once(G5_THEME_PATH.'/head.php');
         ?>
         </div>
 </div>
-
 
 
 <script>

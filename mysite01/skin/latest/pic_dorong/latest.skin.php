@@ -22,28 +22,27 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         $img = G5_IMG_URL.'/no_img.png';
         $thumb['alt'] = '이미지가 없습니다.';
     }
-    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="img-fluid">';
+    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="w-100">';
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
         <div class="sItem">
-            <a href="<?php echo $wr_href; ?>" >
-                <?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?>
-            </a>
-            <?php
-
-            echo "<a href=\"".$wr_href."\"> ";
-            if ($list[$i]['is_notice'])
-                echo "<strong>".$list[$i]['subject']."</strong>";
-            else
-                echo $list[$i]['subject'];
-
-            echo "</a>";
-            ?>
-
-            <div class="lt_info">
-            	<span class="lt_date"><?php echo $list[$i]['datetime2'] ?></span>              
+            <div class="img">
+                <a href="<?php echo $wr_href; ?>" >
+                    <?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?>
+                </a>
             </div>
-    </div>
+
+            <div class="txt">
+                <?php
+                echo "<a href=\"".$wr_href."\"> ";
+                if ($list[$i]['is_notice'])
+                    echo "<strong>".$list[$i]['subject']."</strong>";
+                else
+                    echo $list[$i]['subject'];
+                echo "</a>";
+                ?>
+            </div>
+        </div>
 
 
     <?php }  ?>
