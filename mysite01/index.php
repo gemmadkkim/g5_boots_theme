@@ -18,6 +18,7 @@ include_once(G5_THEME_PATH.'/head.php');
     .mView{
         width: 100%;padding-top: 36%;
         position: relative;overflow: hidden;
+        clear: both;
         
         }
     .mView video{position: absolute;width: 100%;left: 50%;top: 50%; transform:translate(-50%,-50%);object-fit: fill;}
@@ -26,17 +27,17 @@ include_once(G5_THEME_PATH.'/head.php');
     <video src="https://ybmlemon.com/img/web/HOME/main/ybmlemon.mp4" autoplay="" muted="" draggable="true"></video>
 </div>
 
-<div class="mainCon01 container py-5">
+<div class="mainCon01 container py-5 mt-5">
     <div class="row">
-        <div class="col-12 col-md-7 imgBox mb-3 mb-md-0 order-2 order-md-1">
+        <div class="col-12 col-md-7 imgBox mb-3 mb-md-0 order-2 mt-5 mt-md-0">
             <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_visual_all.png" alt="">
         </div>
-        <div class="col-12 col-md-5 txtBox order-1 order-md-2">
+        <div class="col-12 col-md-5 txtBox order-1 order-md-2 mb-5 mb-md-0">
             <div class="txtWrap">
                 <h2 class="fs-1 fw-bold text-center text-md-start">YBM 레몬만의 </h2>
                 <h2 class="fs-1 fw-bold text-center text-md-start mb-3">전용뷰어로 수업 </h2>
-                <p class="text-secondary text-center text-md-start fs-5">화상 회의실 같은 딱딱한 뷰어가 아닙니다. </p>
-                <p class="text-secondary text-center text-md-start fs-5">YBM교육이 개발한 <span class="text-success fs-5">화상수업 전용 뷰어</span>입니다.</p>
+                <p class="text-secondary text-center text-md-start fs-6 fs-md-5">화상 회의실 같은 딱딱한 뷰어가 아닙니다. </p>
+                <p class="text-secondary text-center text-md-start fs-6 fs-md-5">YBM교육이 개발한 <span class="text-success fs-6 fs-md-5 fw-bold">화상수업 전용 뷰어</span>입니다.</p>
             </div>
         </div>
     </div>

@@ -358,13 +358,11 @@ box-sizing:content-box;
   position: relative;
 }
 .mainCon01 .txtBox .txtWrap{
-  position: absolute;left: 800px;top: 50%;
+  position: absolute;left: 80px;top: 50%;
   transform:translateY(-50%);
 }
 
 
 @media (max-width:768px) {
-  .mainCon01 .txtBox .txtWrap{
-    left: 0;
-  }
+
 }
