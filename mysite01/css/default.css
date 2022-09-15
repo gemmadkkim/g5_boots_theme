@@ -365,9 +365,10 @@ box-sizing:content-box;
 .mainCon02 .card{
   box-shadow: 5px 5px 10px #ccc;
 }
-
+.mainCon02 .graph p{margin-bottom: 50px;}
 .mainCon02 .graph img{
-  vertical-align: middle;
+  display: block;
+  margin: 0 auto;
 }
 
 
