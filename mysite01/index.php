@@ -29,10 +29,10 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <div class="mainCon01 container py-5 mt-5">
     <div class="row">
-        <div class="col-12 col-md-7 imgBox mb-3 mb-md-0 order-2 mt-5 mt-md-0">
+        <div class="col-md-7 imgBox mb-3 mb-md-0 order-2 mt-5 mt-md-0">
             <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_visual_all.png" alt="">
         </div>
-        <div class="col-12 col-md-5 txtBox order-1 order-md-2 mb-5 mb-md-0">
+        <div class="col-md-5 txtBox order-1 order-md-2 mb-5 mb-md-0">
             <div class="txtWrap">
                 <h2 class="fs-1 fw-bold text-center text-md-start">YBM 레몬만의 </h2>
                 <h2 class="fs-1 fw-bold text-center text-md-start mb-3">전용뷰어로 수업 </h2>
@@ -43,23 +43,116 @@ include_once(G5_THEME_PATH.'/head.php');
     </div>
 </div>
 <div class="mainCon02 container ">
-    <div class="graph ">
+    <div class="graph mb-5 ">
         <h2 class="fs-1 fw-bold text-center mb-3" >YBM 레몬만의 밀착 학습관리</h2>
         <p class="text-secondary text-center fs-6 fs-md-5">체계적인 관리를 통해 우리 아이의 학습효과를 극대화 합니다.</p>
         <img class="gImg" src="<?php echo G5_THEME_IMG_URL?>/graph.png" alt="">
     </div>
-    <div class="row gap-3">
-        <div class="col-12 col-md-3 card rounded-4 border-0 d-flex justify-content-center align-items-center" style="height:100px">
-          <div class="row ">
-              <img class="col-2 img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_report.png" alt="">
-              <div class="col-10 ">
-                <h4 class="text-black fs-5">학습 결과 보고서</h4>
-                <h4 class="text-secondary fs-5">Daily Class Report</h4>
-              </div>
-          </div>
+    <div class="row mb-3 ">
+        <div class="col-md-3 " >
+            <div class="card rounded-4 border-0 py-3 
+            d-flex flex-row justify-content-center align-items-center mb-2">
+                <div class="icon">
+                    <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_report.png" alt="">
+                </div>
+                <div class="txtBox">
+                    <h4 class="text-black fs-5">학습 결과 보고서</h4>
+                    <h4 class="text-secondary fs-5">Daily Class Report</h4>
+                </div>
+            </div>
         </div>
+        <div class="col-md-3 " >
+            <div class="card rounded-4 border-0 py-3 
+            d-flex flex-row justify-content-center align-items-center mb-2">
+                <div class="icon">
+                    <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_test.png" alt="">
+                </div>
+                <div class="txtBox">
+                    <h4 class="text-black fs-5">성취도 테스트</h4>
+                    <h4 class="text-secondary fs-5">Daily Class Report</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 " >
+            <div class="card rounded-4 border-0 py-3 
+            d-flex flex-row justify-content-center align-items-center mb-2">
+                <div class="icon">
+                    <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_solution.png" alt="">
+                </div>
+                <div class="txtBox">
+                    <h4 class="text-black fs-5">화상솔루션</h4>
+                    <h4 class="text-secondary fs-5">Daily Class Report</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 " >
+            <div class="card rounded-4 border-0 py-3 
+            d-flex flex-row justify-content-center align-items-center mb-2">
+                <div class="icon">
+                    <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_homework.png" alt="">
+                </div>
+                <div class="txtBox">
+                    <h4 class="text-black fs-5">온ㆍ오프라인 숙제관리</h4>
+                    <h4 class="text-secondary fs-5">Daily Class Report</h4>
+                </div>
+            </div>
+        </div>
+        
 
     </div>
+    <div class="row mb-3 ">
+        <div class="col-md-3 " >
+            <div class="card rounded-4 border-0 py-3 
+            d-flex flex-row justify-content-center align-items-center mb-2">
+                <div class="icon">
+                    <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_attendance.png" alt="">
+                </div>
+                <div class="txtBox">
+                    <h4 class="text-black fs-5">출결관리</h4>
+                    <h4 class="text-secondary fs-5">Attendance</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 " >
+            <div class="card rounded-4 border-0 py-3 
+            d-flex flex-row justify-content-center align-items-center mb-2">
+                <div class="icon">
+                    <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_counsel.png" alt="">
+                </div>
+                <div class="txtBox">
+                    <h4 class="text-black fs-5">정기상담관리</h4>
+                    <h4 class="text-secondary fs-5">Regular Consulting</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 " >
+            <div class="card rounded-4 border-0 py-3 
+            d-flex flex-row justify-content-center align-items-center mb-2">
+                <div class="icon">
+                    <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_alert.png" alt="">
+                </div>
+                <div class="txtBox">
+                    <h4 class="text-black fs-5">모바일 알림</h4>
+                    <h4 class="text-secondary fs-5">Notifications</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 " >
+            <div class="card rounded-4 border-0 py-3 
+            d-flex flex-row justify-content-center align-items-center mb-2">
+                <div class="icon">
+                    <img class="img-fluid" src="<?php echo G5_THEME_IMG_URL?>/main_icon_point.png" alt="">
+                </div>
+                <div class="txtBox">
+                    <h4 class="text-black fs-5">포인트 제도</h4>
+                    <h4 class="text-secondary fs-5">Reward System</h4>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
 
 </div>
 
