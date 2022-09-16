@@ -7,6 +7,7 @@ html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
 h1, h2, h3, h4, h5, h6 {font-size:1em;font-family:'Malgun Gothic', dotum, sans-serif}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
 
+li{list-style: none;}
 ul, dl,dt,dd {margin:0;padding:0;list-style:none}
 legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
 label, input, button, select, img {vertical-align:middle;font-size:1em}
@@ -372,6 +373,51 @@ box-sizing:content-box;
 }
 
 
-@media (max-width:768px) {
 
+
+
+/* footer */
+footer{}
+footer .ftTop{height:220px; background:#3e3e46;}
+footer .ftTop h4{
+  line-height: 60px;
+}
+.ftMenu ul li a{
+  color:#acacb0;
+  font-size: 14px;
+}
+
+footer .ftBtm{
+  background: #232328;
+  position: relative;
+}
+footer .ftBtm .ftLine{
+  width: 100%;
+  content: "";
+  border-bottom: solid 1px  #eee;
+  position: absolute;
+  top: 50px;left: 0;
+}
+footer .ftBtm .ftNav{
+  display: flex;justify-content: start;align-items: center;
+}
+
+footer .ftBtm .ftIcon img{width: 30px;height: 30px;object-fit: contain;margin-left: 15px;}
+footer .ftBtm .ftNav li{margin-right: 40px;}
+footer .ftBtm .ftNav li a{font-size: 16px; line-height: 50px;}
+footer .ftBtm .ftAdd{font-size: 14px;}
+footer .ftBtm .ftAdd li{display: flex;line-height: 30px;}
+footer .ftBtm .ftAdd p{color:#ccc;font-weight: bold;margin-right: 10px;}
+footer .ftBtm .ftAdd span{color:#ccc;}
+footer .ftBtm .ftAdd li:nth-child(4) span:first-child{margin-right: 10px;}
+
+
+
+@media (max-width:768px) {
+  footer .ftTop{display: none;}
+  footer .ftBtm .ftLine{display: none;}
+
+  footer .ftBtm .ftIcon{
+    justify-content: center;
+  }
 }
