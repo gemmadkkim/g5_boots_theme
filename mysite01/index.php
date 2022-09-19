@@ -177,7 +177,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <script>
     $('.slickslide2').slick({
     centerMode: true,
-    centerPadding: '60px',
+    centerPadding: '40px',
     slidesToShow: 5,
     nextArrow:$('.slide2 .next'),
     prevArrow:$('.slide2 .prev'),
